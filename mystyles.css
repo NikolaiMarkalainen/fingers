@@ -1,0 +1,14 @@
+div.Combination{
+text-align: center;
+background-color: aliceblue;
+
+}
+
+div.alignment{
+    text-align: center;
+    position: relative;
+}
+
+.correct{
+    color:green;
+}

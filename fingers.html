@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>How many fingers</title>
+    <link type="text/css" rel="stylesheet" href="mystyles.css">
+</head>
+<body>
+<div id="color"></div>
+
+    <p> Guess how many fingers I am holding </p>
+    <p><input id="num1" type="text"></p>
+    <p id="calculate"><button>GUESS</button></p>
+
+
+        <div id="Correct" ><p style = "color:green">CORRECT</p></div>
+    </div>
+    <p id ="wrong" type ="text">Try again it was: </p>
+    <div id="result" type="text" style="position:relative; left:110px; top:-33px;"></div>
+  
+<script type="text/javascript">
+  document.getElementById("Correct").style.display ="none";
+    document.getElementById("wrong").style.display="none";
+
+    document.getElementById("calculate").onclick=function manyFingers(){     
+        generateFingers = (x) =>{
+        return Math.floor(Math.random() * 11) 
+        }
+    let result = generateFingers(11); 
+    let input = document.getElementById("num1").value;
+    document.getElementById("Correct").style.display ="none";
+    document.getElementById("wrong").style.display="none";
+    console.log(result);
+    
+    if(input == result){
+       document.getElementById("result").style.display ="none";
+        let color = document.getElementById("color");
+       color;
+        document.getElementById("Correct").style.display ="block";
+    }
+    else {     
+        document.getElementById("result").style.display="block";
+        let text = document.getElementById("wrong").style.display="block"; 
+     
+        let full = document.getElementById("result").innerHTML=result;
+        
+        let fulltext = text+full;
+        fulltext;
+        return manyFingers;
+        }
+    
+    }
+
+</script>
+</body>
+
+</html>
